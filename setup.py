@@ -32,4 +32,4 @@ def reply():
 
 #endregion
 if (__name__=="__main__"):
-    appbot.run(port=5000)
+    appbot.run(debug=True)
