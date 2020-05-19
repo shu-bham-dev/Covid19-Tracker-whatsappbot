@@ -12,8 +12,8 @@ collection=db["wp_db"]
 
 
 #FlaskSetup
-appbot=Flask(__name__)
-@appbot.route("/sms",methods=["get","post"])
+app=Flask(__name__)
+@app.route("/sms",methods=["get","post"])
 def reply():
     num=request.form.get("From")
     num=num.replace("whatsapp:","")
@@ -32,4 +32,4 @@ def reply():
 
 #endregion
 if (__name__=="__main__"):
-    appbot.run(debug=True)
+    app.run(debug=True)
